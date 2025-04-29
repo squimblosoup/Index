@@ -2,6 +2,32 @@
 <html>
 <head>
     <title>click me ;-;</title>
+    <style>
+        body {
+            background-color: #c2fe0b;
+            min-height: 200vh;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+    <script>
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercentage = scrollPosition / maxScroll;
+            
+            // Calculate color values
+            const startColor = [194, 254, 11]; // #c2fe0b
+            const endColor = [0, 255, 255];    // #00ffff
+            
+            const currentColor = startColor.map((start, i) => {
+                return Math.round(start + (endColor[i] - start) * scrollPercentage);
+            });
+            
+            document.body.style.backgroundColor = `rgb(${currentColor.join(',')})`;
+        });
+    </script>
 </head>
 <link rel="icon" src="Marathon_logo.svg.png" type="image/x-icon">
 <body>
