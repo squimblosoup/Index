@@ -1,36 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<head>
-    <title>click me ;-;</title>
-    <style>
-        body {
-            background-color: #c2fe0b;
-            min-height: 200vh;
-            margin: 0;
-            padding: 0;
-            transition: background-color 0.3s ease;
-        }
-    </style>
-    <script>
-        window.addEventListener('scroll', function() {
-            const scrollPosition = window.scrollY;
-            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollPercentage = scrollPosition / maxScroll;
-            
-            // Calculate color values
-            const startColor = [194, 254, 11]; // #c2fe0b
-            const endColor = [0, 255, 255];    // #00ffff
-            
-            const currentColor = startColor.map((start, i) => {
-                return Math.round(start + (endColor[i] - start) * scrollPercentage);
-            });
-            
-            document.body.style.backgroundColor = `rgb(${currentColor.join(',')})`;
-        });
-    </script>
-</head>
 <link rel="icon" src="Marathon_logo.svg.png" type="image/x-icon">
 <body>
+    <!-- HERO section: animation background + title -->
+    <header id="hero"> <h1 class="site-title">Welcome to My Site</h1> </header>
     <div>
     <h1>what did you think would happen when you read the title of this page?</h1>
     <h2>what did you think would happen when you read the title of this page?</h2>
@@ -40,7 +13,23 @@
     <div>
     <p1>I met a traveller from an antique land</p1>
     <a href="https://www.youtube.com/watch?v=fvbEnWLRo1s">Who said- "Two vast and trunkless legs of stone<br><img src="Marathon_logo.svg.png" style><br> Stand in the desert</a>
-    <style> body {background-color: #c2fe0b;}</style>
+    <style> body {background-color: #c2fe0b;}
+        /* ===== Hero Banner ===== */
+    #hero{
+        position:relative; /* parent for absolute children */
+        height:60vh; /* 60% of viewport height */
+        overflow:hidden; /* hide particles outside box */
+     }
+    .site-title{
+     position:absolute;
+     top:50%; left:50%;
+     transform:translate(-50%,-50%); /* perfect centre */
+     color:#fff;
+     font-size:4rem;
+     text-shadow:0 0 12px #000;
+     z-index:10; /* keep text above canvas */ }
+  
+    </style>
     <p2>. . . . Near the<mark>m</mark>, on the s<mark>a</mark>nd,
         <br>Half sunk a <b>SHATTE<mark>R</mark>ED</b> vis<mark>a</mark>ge lies, whose frown,
         <br>And wrinkled lip, and sneer of cold command,<br></p2>
@@ -56,6 +45,11 @@
     <li>Of that colossal Wreck, boundless and bare</li><li>The lone and level sands stretch far away.”
     </li></ol>
     <!--i am leaving a comment-->
+<!-- 1. p5.js library from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/p5@latest/lib/p5.min.js"></script>
+<!-- 2. YOUR sketch file -->
+<script src="js/mySketch.js"></script> </body> </html>
 </body>
 </html>
 <!--Me when i comment-->
+<!--AAAAAAAAAAh-->
