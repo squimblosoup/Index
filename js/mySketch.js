@@ -1,6 +1,6 @@
 /* ORIGINAL: "Waves light" by Jubal smith – CC-BY 4.0
 URL: https://openprocessing.org/sketch/2559208
-Remixed by Aewynn Pelszyski, 2025-05-07
+Remixed by Charles Pelszyski, 2025-05-07
 Purpose: animated hero background
 
 This sketch creates an animated wave-like pattern using Perlin noise and particle systems.
